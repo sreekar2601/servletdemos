@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd" id="WebApp_ID" version="4.0">
+  <display-name>contextParamsdemo</display-name>
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>index.htm</welcome-file>
+    <welcome-file>default.html</welcome-file>
+    <welcome-file>default.jsp</welcome-file>
+    <welcome-file>default.htm</welcome-file>
+  </welcome-file-list>
+   <context-param>
+  	<param-name>login-expiration-time-in-seconds</param-name>
+  	<param-value>3600</param-value>
+  </context-param>
+  
+  <context-param>
+  	<param-name>project-name</param-name>
+  	<param-value>Context Params Demo</param-value>
+  </context-param>
+  
+  <servlet>
+  	<servlet-name>Shoppingservlet</servlet-name>
+  	<servlet-class>com.samples.params.servlets.Shoppingservlet</servlet-class>
+  	<init-param>
+  		<param-name>greeting</param-name>
+  		<param-value>Welcome ShoppingServlet</param-value>
+  	</init-param>
+  	<init-param>
+  		<param-name>license</param-name>
+  		<param-value>Full license</param-value>
+  	</init-param>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>Shoppingservlet</servlet-name>
+  	<url-pattern>/Shoppingservlet</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+  	<servlet-name>TestParamservlet</servlet-name>
+  	<servlet-class>com.samples.params.servlets.TestParamservlet</servlet-class>
+  	<init-param>
+  		<param-name>greeting</param-name>
+  		<param-value>Welcome TestParamServlet</param-value>
+  	</init-param>
+  	<init-param>
+  		<param-name>license</param-name>
+  		<param-value>Trial license</param-value>
+  	</init-param>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>TestParamservlet</servlet-name>
+  	<url-pattern>/TestParamservlet</url-pattern>
+  </servlet-mapping>
+  
+  
+  
+  
+  
+</web-app>
