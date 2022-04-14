@@ -5,13 +5,20 @@ import java.io.PrintWriter;
 
 import javax.servlet.ServletContext;
 import javax.servlet.ServletException;
+import javax.servlet.annotation.WebInitParam;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 
-
+@WebServlet(
+		urlPatterns="/TestParamservlet",
+		initParams= {
+			@WebInitParam(name="greeting", value="Welcome TestParamServlet-1"),
+			@WebInitParam(name="license", value="Trial license-1")
+		}
+	)
 public class TestParamservlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        

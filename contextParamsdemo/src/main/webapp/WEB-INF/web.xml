@@ -36,22 +36,7 @@
   	<url-pattern>/Shoppingservlet</url-pattern>
   </servlet-mapping>
 
-  <servlet>
-  	<servlet-name>TestParamservlet</servlet-name>
-  	<servlet-class>com.samples.params.servlets.TestParamservlet</servlet-class>
-  	<init-param>
-  		<param-name>greeting</param-name>
-  		<param-value>Welcome TestParamServlet</param-value>
-  	</init-param>
-  	<init-param>
-  		<param-name>license</param-name>
-  		<param-value>Trial license</param-value>
-  	</init-param>
-  </servlet>
-  <servlet-mapping>
-  	<servlet-name>TestParamservlet</servlet-name>
-  	<url-pattern>/TestParamservlet</url-pattern>
-  </servlet-mapping>
+
   
   
   
